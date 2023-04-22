@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@900&display=swap");
+
+html {
+  font-family: "Fira Sans", sans-serif;
+}
+
+body {
+  background-color: $background;
+}
+
+.block {
+  &__content {
+    box-sizing: border-box;
+    background: $block-background;
+    border: $block-border;
+    border-radius: 27px;
+
+    div:nth-child(1) {
+      border-radius: 27px;
+    }
+  }
+}
+
+.button {
+  height: 45px;
+  width: 150px;
+  border-radius: 33px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 19px;
+  line-height: 20px;
+  letter-spacing: 0.04em;
+  color: $white;
+  text-shadow: $custom-button-shadow;
+  border: 2px solid $white;
+  border: 2px solid $white;
+
+  &--primary {
+    background: $custom-button-primary;
+    box-shadow: $custom-button-primary-shadow;
+  }
+
+  &--success {
+    background: $custom-button-success;
+    box-shadow: $custom-button-success-shadow;
+  }
+}
+
+.header-title {
+  font-weight: 900;
+  font-size: 3vh;
+  line-height: 26px;
+  color: $header-title-color;
+  text-shadow: $header-title-shadow-color;
+}
+
+.full-height {
+  height: 100vh;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.skip {
+  background: #e77e23;
+  height: 30px;
+  left: 50%;
+  padding: 8px;
+  position: absolute;
+  transform: translateY(-100%);
+  transition: transform 0.3s;
+
+  &:focus {
+    transform: translateY(0%);
+  }
+}

@@ -1,0 +1,38 @@
+.cinput {
+  .cinput-text {
+    text-align: center;
+    font-weight: 900;
+    font-size: 16px;
+    color: $cinput-font-color;
+  }
+
+  &__box {
+    height: 49px;
+    background: $cinput-background-color;
+    border-radius: 31px;
+    border: none;
+    text-align: center;
+
+    &:focus {
+      @extend .cinput-text;
+    }
+
+    &::placeholder {
+      @extend .cinput-text;
+    }
+
+    &:disabled {
+      @extend .cinput-text;
+      background: $cinput-background-color;
+      font-size: 24px;
+    }
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 17px;
+    color: $cinput-title-color;
+  }
+}
