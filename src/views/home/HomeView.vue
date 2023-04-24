@@ -14,7 +14,7 @@ const startGame = () => {
   const store = useUserStore();
 
   store.setUser(name);
-  router.push("/game");
+  router.push({ name: "game" });
 };
 
 const changeName = (newName) => (name.value = newName);
@@ -31,10 +31,13 @@ const changeName = (newName) => (name.value = newName);
                 :label="'BIENVENIDO!'"
                 :placeholder="'INTRODUCE TU NOMBRE'"
                 :value="name"
+                :id="'name'"
                 @change-value="changeName"
               />
             </div>
             <button
+              id="start-button"
+              :disabled="!name.length"
               @click="startGame"
               aria-label="Start Game Button"
               class="mx-auto button button--success"
