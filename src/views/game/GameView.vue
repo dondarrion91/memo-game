@@ -64,7 +64,7 @@ const changeName = () => {
   const store = useUserStore();
 
   store.setUser("");
-  router.push("/");
+  router.push({ name: "home" });
 };
 
 const startGame = async () => {
@@ -114,8 +114,19 @@ onMounted(async () => {
             <template v-slot:modal-content>
               <p class="my-5 text-center form-label header-title">{{ title }}</p>
               <div>
-                <InputComponent :label="'ACIERTOS'" :value="points" :disabled="true" />
-                <InputComponent class="mt-3" :label="'FALLADOS'" :value="misses" :disabled="true" />
+                <InputComponent
+                  :id="'points'"
+                  :label="'ACIERTOS'"
+                  :value="points"
+                  :disabled="true"
+                />
+                <InputComponent
+                  class="mt-3"
+                  :id="'misses'"
+                  :label="'FALLADOS'"
+                  :value="misses"
+                  :disabled="true"
+                />
               </div>
             </template>
             <template v-slot:modal-footer-content>
