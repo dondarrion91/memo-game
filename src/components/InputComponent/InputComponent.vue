@@ -30,7 +30,7 @@ const changeValue = (event) => emit("change-value", event.target.value);
 
 <template>
   <div class="cinput">
-    <p class="mb-3 text-center form-label cinput__title" role="label">{{ label }}</p>
+    <p class="mb-3 text-center form-label cinput__title" role="heading">{{ label }}</p>
     <input
       class="form-control cinput__box"
       type="text"
