@@ -13,7 +13,7 @@ defineProps({
 
 <template>
   <div class="d-flex justify-content-evenly my-3">
-    <p class="header-title text-success">Aciertos: {{ points }}</p>
+    <p class="header-title text-check">Aciertos: {{ points }}</p>
     <p class="header-title text-danger">Errores: {{ misses }}</p>
   </div>
 </template>
