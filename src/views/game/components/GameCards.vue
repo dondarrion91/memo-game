@@ -63,8 +63,8 @@ const hideOrMatchCards = (prev, curr) => {
   matchCards(prev, curr, prevIndex, currIndex);
 };
 
-const flipCard = (row, col, revelead) => {
-  if (revelead || waiting.value) return;
+const flipCard = (row, col, revelead, matched) => {
+  if (revelead || matched || waiting.value) return;
   revealCardAndAddToSelection(row, col);
 
   const [prev, curr] = selected.value;
@@ -100,7 +100,7 @@ watch(props.cards, () => {
     >
       <img
         class="w-100 h-100 pointer"
-        @click="flipCard(row, col, revelead)"
+        @click="flipCard(row, col, revelead, matched)"
         :src="showOrRevealCard(revelead, matched, url)"
         :alt="name"
       />
