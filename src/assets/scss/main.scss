@@ -35,6 +35,11 @@ body {
   border: 2px solid $white;
   border: 2px solid $white;
 
+  &:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+  }
+
   &--primary {
     background: $custom-button-primary;
     box-shadow: $custom-button-primary-shadow;
@@ -42,6 +47,11 @@ body {
 
   &--success {
     background: $custom-button-success;
+    box-shadow: $custom-button-success-shadow;
+  }
+
+  &--check {
+    background: $custom-button-check;
     box-shadow: $custom-button-success-shadow;
   }
 }
@@ -63,7 +73,7 @@ body {
 }
 
 .skip {
-  background: #e77e23;
+  background: $skip-color;
   height: 30px;
   left: 50%;
   padding: 8px;
@@ -74,4 +84,8 @@ body {
   &:focus {
     transform: translateY(0%);
   }
+}
+
+.text-check {
+  color: $custom-button-check;
 }
