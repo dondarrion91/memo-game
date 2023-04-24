@@ -2,6 +2,12 @@
 
 ## Project Setup
 
+### Node version used
+v14.20.0
+
+### npm version used
+v6.14.17
+
 ### Install dependencies
 
 ```sh
